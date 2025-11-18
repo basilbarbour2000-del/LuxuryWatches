@@ -1,3 +1,5 @@
+package com.example.luxurywatches;
+
 import android.os.Parcel;
 
 import java.util.ArrayList;
