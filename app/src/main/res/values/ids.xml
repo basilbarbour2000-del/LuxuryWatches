@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="etUsernameLogin" type="id" />
+    <item name="tvSignupLinkLogin" type="id" />
+    <item name="tvForgotPasswordLogin" type="id" />
+    <item name="etPasswordLogin" type="id" />
+    <item name="btnLoginLogin" type="id" />
+    <item name="frameLayout" type="id" />
+    <item name="etForgotPassword" type="id" />
+    <item name="btnResetPassword" type="id" />
+    <item name="etUsernameSignup" type="id" />
+    <item name="etPasswordSignup" type="id" />
+    <item name="etFirstnameSignupFragment" type="id" />
+    <item name="etLastnameSignupFragment" type="id" />
+    <item name="etConfirmPasswordSignupFragment" type="id" />
+    <item name="etPhoneSignupFragment" type="id" />
+    <item name="etAddressSignupFragment" type="id" />
+    <item name="btnSignupSignup" type="id" />
+    <item name="ivPhotoSignupFragment" type="id" />
+</resources>

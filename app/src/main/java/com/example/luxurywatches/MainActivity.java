@@ -1,6 +1,7 @@
 package com.example.luxurywatches;
 
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,5 +21,13 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+    }
+
+    public View getBottomNavigationView() {
+        return null;
+    }
+
+    public void pushFragment(SignupFragment frgotPasswordFragment) {
+
     }
 }

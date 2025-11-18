@@ -45,7 +45,6 @@ public class Watches {
         }
     };
 
-    @Override
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(this.price);
         dest.writeString(this.size);
@@ -92,120 +91,23 @@ public class Watches {
     }
 
     public void setBrand(String phone) {
-        this.phone = phone;
+        this.brand = brand;
     }
 
-    public String getColor() {
-        return color;
-    }
 
-    public void setColor(String color) {
-        this.color = color;
-    }
 
-    public String getCar_num() {
-        return car_num;
-    }
-
-    public void setCar_num(String car_num) {
-        this.car_num = car_num;
-    }
-
-    public String getManufacturer() {
-        return manufacturer;
-    }
-
-    public void setManufacturer(String manufacturer) {
-        this.manufacturer = manufacturer;
-    }
-
-    public String getYear() {
-        return year;
-    }
-
-    public void setYear(String year) {
-        this.year = year;
-    }
-
-    public String getCar_model() {
-        return Car_model;
-    }
-
-    public void setCar_model(String car_model) {
-        Car_model = car_model;
-    }
-
-    public String getTest() {
-        return test;
-    }
-
-    public void setTest(String test) {
-        this.test = test;
-    }
-
-    public String getKilometre() {
-        return kilometre;
-    }
-
-    public void setKilometre(String kilometre) {
-        this.kilometre = kilometre;
-    }
-
-    public String getEngine_capacity() {
-        return Engine_capacity;
-    }
-
-    public void setEngine_capacity(String engine_capacity) {
-        Engine_capacity = engine_capacity;
-    }
-
-    public String getGear_shifting_model() {
-        return Gear_shifting_model;
-    }
-
-    public void setGear_shifting_model(String gear_shifting_model) {
-        Gear_shifting_model = gear_shifting_model;
-    }
-
-    public String getPrice() {
-        return price;
-    }
-
-    public void setPrice(String price) {
-        this.price = price;
-    }
-
-    public String getPhoto() {
-        return photo;
-    }
-
-    public void setPhoto(String photo) {
-        this.photo = photo;
-    }
 
     @Override
     public String toString() {
-        return "Car{" +
-                "id='" + id + '\'' +
-                "nameCar='" + nameCar + '\'' +
-                ", horse_power='" + horse_power + '\'' +
-                ", owners='" + owners + '\'' +
-                ", phone='" + phone + '\'' +
+        return "watches{" +
+                "price='" + price + '\'' +
+                "size='" + size + '\'' +
                 ", color='" + color + '\'' +
-                ", car_num='" + car_num + '\'' +
-                ", manufacturer='" + manufacturer + '\'' +
-                ", year='" + year + '\'' +
-                ", Car_model='" + Car_model + '\'' +
-                ", test='" + test + '\'' +
-                ", kilometre='" + kilometre + '\'' +
-                ", Engine_capacity='" + Engine_capacity + '\'' +
-                ", Gear_shifting_model='" + Gear_shifting_model + '\'' +
-                ", price='" + price + '\'' +
-                ", photo='" + photo + '\'' +
+                ", gender='" + gender + '\'' +
+                ", brand='" + brand + '\'' +
                 '}';
     }
 
-    @Override
     public int describeContents() {
         return 0;
     }
