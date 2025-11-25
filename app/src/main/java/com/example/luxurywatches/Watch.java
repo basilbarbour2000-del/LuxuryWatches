@@ -2,34 +2,40 @@ package com.example.luxurywatches;
 
 import android.os.Parcel;
 import android.os.Parcelable;
+import android.widget.EditText;
 
-public class Watches {
+import java.util.Collection;
+
+public class Watch {
     private String price;
     private String size;
     private  String color;
     private  String gender;
     private String brand;
+    private String photo;
 
 
-    public Watches() {
+    public Watch() {
     }
 
-    public Watches(String price, String size, String color, String gender, String brand
+    public Watch(String price, String size, String color, String gender, String brand, String photo
                    ) {
         this.price = price;
         this.size = size;
         this.color = color;
         this.gender = gender;
         this.brand = brand;
+        this.photo=photo;
 
     }
 
-    protected Watches(Parcel in) {
+    protected Watch(Parcel in) {
         this.price = in.readString();
         this.size = in.readString();
         this.color = in.readString();
         this.gender = in.readString();
         this.brand = in.readString();
+        this.photo=in.readString();
 
     }
 
@@ -45,12 +51,20 @@ public class Watches {
         }
     };
 
+    public Watch(EditText etprice, EditText etsize, EditText etColor, EditText etgender, EditText etbrand, EditText etphoto) {
+    }
+
+    public static Collection<Object> trim() {
+        return java.util.Collections.emptyList();
+    }
+
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(this.price);
         dest.writeString(this.size);
         dest.writeString(this.color);
         dest.writeString(this.gender);
         dest.writeString(this.brand);
+        dest.writeString(this.photo);
 
     }
 
@@ -93,6 +107,9 @@ public class Watches {
     public void setBrand(String phone) {
         this.brand = brand;
     }
+    public  String  getphoto(){return photo;}
+    public void setPhoto(String photo){this.photo=photo;}
+
 
 
 
@@ -105,6 +122,8 @@ public class Watches {
                 ", color='" + color + '\'' +
                 ", gender='" + gender + '\'' +
                 ", brand='" + brand + '\'' +
+                ", photo='" + photo + '\'' +
+
                 '}';
     }
 

@@ -30,4 +30,7 @@ public class MainActivity extends AppCompatActivity {
     public void pushFragment(SignupFragment frgotPasswordFragment) {
 
     }
+
+    public void pushFragment(AddCarFragment addCarFragment) {
+    }
 }
