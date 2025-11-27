@@ -33,4 +33,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void pushFragment(AddCarFragment addCarFragment) {
     }
+
+    public void pushFragment(AllFragment allFragment) {
+    }
 }

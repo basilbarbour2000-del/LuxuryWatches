@@ -288,4 +288,5 @@ public class AddWatchesFragment extends Fragment {
 
     public void toBigImg(View view) {
     }
+
 }

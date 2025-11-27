@@ -6,7 +6,7 @@ import android.widget.EditText;
 
 import java.util.Collection;
 
-public class Watch {
+public class Watch implements Parcelable {
     private String price;
     private String size;
     private  String color;
@@ -58,6 +58,12 @@ public class Watch {
         return java.util.Collections.emptyList();
     }
 
+    public static String getbrand() {
+    }
+
+    public static String getgender() {
+    }
+
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(this.price);
         dest.writeString(this.size);
@@ -68,7 +74,7 @@ public class Watch {
 
     }
 
-    public String getprice() {
+    public static String getprice() {
         return price;
     }
 
@@ -76,7 +82,7 @@ public class Watch {
         this.price= price;
     }
 
-    public String getsize() {
+    public static String getsize() {
         return size;
     }
 
@@ -84,7 +90,7 @@ public class Watch {
         this.size = size;
     }
 
-    public String getcolor() {
+    public static String getcolor() {
         return color;
     }
 
@@ -107,7 +113,7 @@ public class Watch {
     public void setBrand(String phone) {
         this.brand = brand;
     }
-    public  String  getphoto(){return photo;}
+    public static String  getphoto(){return photo;}
     public void setPhoto(String photo){this.photo=photo;}
 
 
