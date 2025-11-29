@@ -120,7 +120,7 @@ public class AllFragment extends Fragment {
                 String selectedItem = list.get(position).getprice();
                 Toast.makeText(getActivity(), "Clicked: " + selectedItem, Toast.LENGTH_SHORT).show();
                 Bundle args = new Bundle();
-                args.putParcelable("car", list.get(position)); // or use Parcelable for better performance
+                args.putParcelable("whatch", list.get(position)); // or use Parcelable for better performance
                 AllFragment cd = new AllFragment();
                 cd.setArguments(args);
                 FragmentTransaction ft=getActivity().getSupportFragmentManager().beginTransaction();
@@ -129,7 +129,7 @@ public class AllFragment extends Fragment {
             }
         });
 
-        fbs.getFire().collection("cars").get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+        fbs.getFire().collection("whatches").get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
             @Override
             public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
                 for (DocumentSnapshot dataSnapshot: queryDocumentSnapshots.getDocuments()){
@@ -183,17 +183,16 @@ public class AllFragment extends Fragment {
         filteredList.clear();
         for(Watch  watch : list)
         {
-            boolean Watch;
-            if ( Watch Watch;
-            Watch.toLowerCase().contains(query.toLowerCase()) ||
-                    Watch.toLowerCase().contains(query.toLowerCase()) ||
-                    Watch.getcolor().toLowerCase().contains(query.toLowerCase()) ||
-                    Watch.getbrand().toLowerCase().contains(query.toLowerCase()) ||
-                    Watch.getphoto().toLowerCase().contains(query.toLowerCase()) ||
-                    Watch.contains(query.toLowerCase()) ||
+            boolean Watch = false;
+            if ( Watch) {
+                boolean b = Watch ||
+                        Watch ||
+                        Watch ||
+                        Watch ||
+                        Watch ||
+                        Watch ;
 
-            {
-                filteredList.add(Watch);
+
             }
         }
         if (filteredList.size() == 0)
@@ -201,7 +200,7 @@ public class AllFragment extends Fragment {
             showNoDataDialogue();
             return;
         }
-        myAdapter = new myAdapter1(getContext(), filteredList);
+        myAdapter = new myAdapter1((FragmentActivity) getContext(), filteredList);
         recyclerView.setAdapter(myAdapter);
         myAdapter= new myAdapter1(getActivity(),filteredList);
         recyclerView.setAdapter(myAdapter);
@@ -232,13 +231,8 @@ public class AllFragment extends Fragment {
         builder.show();
     }
 
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_all_list, container, false);
-    }
-
+ 
+  
     public void gotoAddCarFragment() {
         FragmentTransaction ft= getActivity().getSupportFragmentManager().beginTransaction();
         ft.replace(R.id.frameLayout,new AddCarFragment());
