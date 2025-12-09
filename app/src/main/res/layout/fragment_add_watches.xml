@@ -1,87 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddWatchesFragment"
+    tools:context=".AdminFragment">
 
 
-
-<EditText xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/etCarNumberAddFragment"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:hint="Car Number"
-    android:inputType="price"
-    tools:ignore="Autofill,LabelFor,TextFields" />
-
-
-<EditText
-android:id="@+id/etNameCarAddFragment"
-android:layout_width="match_parent"
-android:layout_height="wrap_content"
-android:hint="size"
-tools:ignore="Autofill,HardcodedText,TextFields" />
-
-
-<EditText
-android:id="@+id/etCarModelAddFragment"
-android:layout_width="match_parent"
-android:layout_height="wrap_content"
-android:hint="gender"
-tools:ignore="Autofill,HardcodedText,TextFields" />
-
-
-<Spinner
-android:id="@+id/yearOfCarSpinner"
-android:layout_width="match_parent"
-android:layout_height="wrap_content"
-android:hint="brand"
-tools:ignore="HardcodedText" />
-
-
-<EditText
-android:id="@+id/etManufacturerAddFragment"
-android:layout_width="match_parent"
-android:layout_height="wrap_content"
-android:hint="photo"
-tools:ignore="Autofill,HardcodedText,TextFields" />
-
-
-<EditText
-android:id="@+id/etPhoneAddFragment"
-android:layout_width="match_parent"
-android:layout_height="wrap_content"
-android:hint="color"
-tools:ignore="Autofill,HardcodedText,TextFields" />
-<LinearLayout
-android:layout_width="match_parent"
-android:layout_height="wrap_content"
-android:orientation="horizontal"
-android:gravity="center">
-<TextView
-    android:layout_width="120sp"
-    android:layout_height="40sp"
-    android:textStyle="bold"
-    android:textSize="15sp"
-    android:text="insert a image:->"
-    tools:ignore="HardcodedText,VisualLintBounds" />
-<ImageView
-    android:id="@+id/ivCarAddCarFragment"
-    android:layout_width="100dp"
-    android:layout_height="100dp"
-    android:src="@drawable/ic_launcher_background"
-    tools:ignore="ContentDescription" />
-
-<Button
-    android:id="@+id/btnAddCarADDFragment"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="ADD"
-    android:layout_marginStart="16dp"
-    android:backgroundTint="#6F7F8F"
-    tools:ignore="HardcodedText" />
-
-</LinearLayout>
+</FrameLayout>
 
 

@@ -99,4 +99,7 @@ public class ForgotPasswordFragment extends Fragment {
         });
         ((MainActivity)getActivity()).pushFragment(new FrgotPasswordFragment());
     }
+
+    private class FrgotPasswordFragment extends AllFragment {
+    }
 }

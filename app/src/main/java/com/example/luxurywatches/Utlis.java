@@ -18,11 +18,7 @@ import com.google.firebase.storage.UploadTask;
 import java.util.UUID;
 
 public class Utlis {
-    private static Utils instance;
-
-    static {
-        instance = new Utils();
-    }
+    private static Utils instance = new Utils();
 
     private FirebaseServices fbs;
     private String imageStr;

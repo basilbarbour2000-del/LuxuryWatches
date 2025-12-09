@@ -138,7 +138,7 @@ public class LoginFragment extends Fragment {
                         {
                             //Toast.makeText(getActivity(), "you have succesfully logged", Toast.LENGTH_SHORT).show();
                             //gotoAddCarFragment();
-                            fbs = FirebaseServices.reloadInstance();
+                            fbs = FirebaseServices.getInstance();
                             gotoCarListMap();
                             Toast.makeText(getActivity(), "Welcome ", Toast.LENGTH_SHORT).show();
 
@@ -169,7 +169,7 @@ public class LoginFragment extends Fragment {
     }
     private void gotoAddCarFragment() {
         FragmentTransaction ft= getActivity().getSupportFragmentManager().beginTransaction();
-        ft.replace(R.id.frameLayout,new AddCarFragment());
+        ft.replace(R.id.frameLayout,new AddWatchesFragment());
         ft.commit();
     }
     private void gotoSignupFragment() {
@@ -183,6 +183,9 @@ public class LoginFragment extends Fragment {
         ft.replace(R.id.frameLayout,new LoginFragment());
         ft.commit();
 
+    }
+
+    private class CarListMapFragment extends Fragment {
     }
 
 /*

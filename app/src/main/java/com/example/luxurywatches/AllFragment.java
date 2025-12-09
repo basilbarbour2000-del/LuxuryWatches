@@ -215,7 +215,7 @@ public class AllFragment extends Fragment {
                 Toast.makeText(getActivity(), "Clicked: " + selectedItem, Toast.LENGTH_SHORT).show();
                 Bundle args = new Bundle();
                 args.putParcelable("car", filteredList.get(position)); // or use Parcelable for better performance
-                Fragment price = new priceFragment();
+                Fragment price = new AddWatchesFragment();
                 cd.setArguments(args);
                 FragmentTransaction ft=getActivity().getSupportFragmentManager().beginTransaction();
                 ft.replace(R.id.frameLayout,cd);
@@ -235,7 +235,7 @@ public class AllFragment extends Fragment {
   
     public void gotoAddCarFragment() {
         FragmentTransaction ft= getActivity().getSupportFragmentManager().beginTransaction();
-        ft.replace(R.id.frameLayout,new AddCarFragment());
+        ft.replace(R.id.frameLayout,new AddWatchesFragment());
         ft.commit();
     }
 

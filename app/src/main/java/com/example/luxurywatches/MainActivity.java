@@ -27,11 +27,11 @@ public class MainActivity extends AppCompatActivity {
         return null;
     }
 
-    public void pushFragment(SignupFragment frgotPasswordFragment) {
+    public void pushFragment(FrgotPasswordFragment frgotPasswordFragment) {
 
     }
 
-    public void pushFragment(AddCarFragment addCarFragment) {
+    public void pushFragment(AddWatchesFragment addWatchesFragment) {
     }
 
     public void pushFragment(AllFragment allFragment) {

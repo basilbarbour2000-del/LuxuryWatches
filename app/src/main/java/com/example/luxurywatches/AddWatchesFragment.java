@@ -199,7 +199,7 @@ public class AddWatchesFragment extends Fragment {
                 openGallery();
             }
         });
-        ((MainActivity)getActivity()).pushFragment(new AddCarFragment());
+        ((MainActivity)getActivity()).pushFragment(new AddWatchesFragment());
     }
 
     private void addToFirestore() {
@@ -282,7 +282,7 @@ public class AddWatchesFragment extends Fragment {
     public void gotoCarList() {
 
         FragmentTransaction ft= getActivity().getSupportFragmentManager().beginTransaction();
-        ft.replace(R.id.frameLayout,new CarListMapFragment());
+        ft.replace(R.id.frameLayout,new AllFragment());
         ft.commit();
     }
 

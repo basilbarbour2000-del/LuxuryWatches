@@ -7,12 +7,12 @@ import android.widget.EditText;
 import java.util.Collection;
 
 public class Watch implements Parcelable {
-    private String price;
-    private String size;
-    private  String color;
+    private static String price;
+    private static String size;
+    private static String color;
     private  String gender;
     private String brand;
-    private String photo;
+    private static String photo;
 
 
     public Watch() {
@@ -59,9 +59,11 @@ public class Watch implements Parcelable {
     }
 
     public static String getbrand() {
+        return "";
     }
 
     public static String getgender() {
+        return "";
     }
 
     public void writeToParcel(Parcel dest, int flags) {

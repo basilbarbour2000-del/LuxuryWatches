@@ -1,4 +1,4 @@
 package com.example.luxurywatches;
 
-public class FrgotPasswordFragment {
+public interface FrgotPasswordFragment {
 }

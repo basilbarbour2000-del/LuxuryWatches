@@ -44,6 +44,7 @@ dependencies {
     implementation(libs.firebase.storage)
     implementation(libs.firebase.functions)
     implementation(libs.firebase.inappmessaging)
+    implementation(libs.navigation.runtime.android)
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
