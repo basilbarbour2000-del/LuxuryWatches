@@ -199,7 +199,6 @@ public class AddWatchesFragment extends Fragment {
                 openGallery();
             }
         });
-        ((MainActivity)getActivity()).pushFragment(new AddWatchesFragment());
     }
 
     private void addToFirestore() {

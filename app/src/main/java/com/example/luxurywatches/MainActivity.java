@@ -8,8 +8,15 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.fragment.app.FragmentTransaction;
 
 public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        gotoLoginFragment();
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,18 +30,13 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    public View getBottomNavigationView() {
-        return null;
-    }
 
-    public void pushFragment(FrgotPasswordFragment frgotPasswordFragment) {
 
-    }
-
-    public void pushFragment(AddWatchesFragment addWatchesFragment) {
-    }
-
-    public void pushFragment(AllFragment allFragment) {
+    private void gotoLoginFragment() {
+        FragmentTransaction ft= getSupportFragmentManager().beginTransaction();
+        ft.replace(R.id.frameLayout,new LoginFragment());
+        ft.commit();
 
     }
+
 }

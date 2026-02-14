@@ -9,7 +9,10 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
 public class myAdapter1 extends RecyclerView.Adapter {
+    private final FragmentActivity activity;
+
     public myAdapter1(FragmentActivity activity, ArrayList<Watch> list) {
+        this.activity = activity;
     }
 
     @NonNull
