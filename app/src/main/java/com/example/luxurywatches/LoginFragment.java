@@ -23,7 +23,6 @@ public class LoginFragment extends Fragment {
     private TextView tvSignupLink;
     private TextView tvForgotPasswardLink;
     private Button btnLogin;
-    private Button asGuest;
     private FirebaseServices fbs;
 
     @Override
@@ -42,8 +41,6 @@ public class LoginFragment extends Fragment {
         super.onStart();
         // connecting components
         fbs = FirebaseServices.getInstance();
-        asGuest=getView().findViewById(R.id.main);
-        asGuest.setVisibility(View.INVISIBLE);
         etUsername=getView().findViewById(R.id.etUsernameLogin);
         tvSignupLink=getView().findViewById(R.id.tvSignupLinkLogin);
         tvForgotPasswardLink=getView().findViewById(R.id.tvForgotPasswordLogin);
@@ -77,9 +74,7 @@ public class LoginFragment extends Fragment {
                     return;
 
                 }
-//                String name=fbs.getFire().collection("users").getParent().getId().toString();
 
-                //Signup procedure
 
                 fbs.getAuth().signInWithEmailAndPassword(username,password).addOnCompleteListener(getActivity(), new OnCompleteListener<AuthResult>() {
                     @Override
