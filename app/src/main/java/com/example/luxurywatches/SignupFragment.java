@@ -23,7 +23,9 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 
-public class SignupFragment extends Fragment {
+public class
+
+SignupFragment extends Fragment {
 
     private static final int GALLERY_REQUEST_CODE = 123;
 

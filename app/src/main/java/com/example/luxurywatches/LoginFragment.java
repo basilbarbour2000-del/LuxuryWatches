@@ -82,7 +82,7 @@ public class LoginFragment extends Fragment {
 
                         if (task.isSuccessful())
                         {
-                            gotoAllFragment();
+                            gotoAddWatchesFragment();
                         }
                         else
                         {
@@ -94,9 +94,14 @@ public class LoginFragment extends Fragment {
 
 
             }
+
+            private void gotoAddWatchesFragment() {
+            }
         });
 
     }
+
+
     public void gotoAllFragment() {
         FragmentTransaction ft=getActivity().getSupportFragmentManager().beginTransaction();
         ft.replace(R.id.frameLayout,new AllFragment());
@@ -113,12 +118,18 @@ public class LoginFragment extends Fragment {
         ft.commit();
 
     }
+
     private void gotoFrgotPasswordFragment() {
         FragmentTransaction ft= getActivity().getSupportFragmentManager().beginTransaction();
         ft.replace(R.id.frameLayout,new LoginFragment());
         ft.commit();
 
     }
+    private void gotoAddWatchesFragment() {
+        FragmentTransaction ft= getActivity().getSupportFragmentManager().beginTransaction();
+        ft.replace(R.id.frameLayout,new LoginFragment());
+        ft.commit();
 
+    }
 
 }
