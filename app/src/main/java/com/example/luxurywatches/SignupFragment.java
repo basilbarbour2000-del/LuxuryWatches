@@ -17,8 +17,10 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 
 public class SignupFragment extends Fragment {
@@ -106,11 +108,22 @@ public class SignupFragment extends Fragment {
         User user = new User(firstname, lastname, username, phone, address, imageURL);
 
         // Create account in Firebase
-        fbs.getAuth().createUserWithEmailAndPassword(username, password)
-                .addOnSuccessListener(authResult -> gotoMainPage())
-                .addOnFailureListener(e ->
-                        Toast.makeText(getActivity(), "Signup failed: " + e.getMessage(), Toast.LENGTH_LONG).show()
-                );
+        fbs.getAuth().createUserWithEmailAndPassword(username,password).addOnCompleteListener(getActivity(), new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+
+                if (task.isSuccessful())
+                {
+                    gotoLoginFragment();
+                    Toast.makeText(getActivity(), "Success!", Toast.LENGTH_SHORT).show();
+                }
+                else
+                {
+                    Toast.makeText(getActivity(), "failed to login! check user or password", Toast.LENGTH_SHORT).show();
+                }
+
+            }
+        });
     }
 
 
@@ -139,5 +152,12 @@ public class SignupFragment extends Fragment {
         FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
         ft.replace(R.id.frameLayout, new AllFragment());
         ft.commit();
+    }
+
+    private void gotoLoginFragment() {
+        FragmentTransaction ft= getActivity().getSupportFragmentManager().beginTransaction();
+        ft.replace(R.id.frameLayout,new LoginFragment());
+        ft.commit();
+
     }
 }

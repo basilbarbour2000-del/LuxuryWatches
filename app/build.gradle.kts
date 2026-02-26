@@ -42,6 +42,7 @@ dependencies {
     implementation(libs.firebase.auth)
     implementation(libs.firebase.firestore)
     implementation(libs.firebase.storage)
+    implementation(platform("com.google.firebase:firebase-bom:34.9.0"))
     implementation(libs.firebase.functions)
     implementation(libs.firebase.inappmessaging)
     implementation(libs.navigation.runtime.android)

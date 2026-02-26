@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "599307974881",
-    "project_id": "luxurywatches-6d451",
-    "storage_bucket": "luxurywatches-6d451.firebasestorage.app"
+    "project_number": "819369890367",
+    "project_id": "luxurywatches123-81e9c",
+    "storage_bucket": "luxurywatches123-81e9c.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:599307974881:android:f1744a23b400a6b3e75fa0",
+        "mobilesdk_app_id": "1:819369890367:android:149e2d40904e837db71e8a",
         "android_client_info": {
           "package_name": "com.example.luxurywatches"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyBXNws4b_Ka5rNACf8wU4kZFiN4x2SQtLc"
+          "current_key": "AIzaSyAbOCcvLLlnyAec1OIBMa0zg6G9by1w4LE"
         }
       ],
       "services": {
