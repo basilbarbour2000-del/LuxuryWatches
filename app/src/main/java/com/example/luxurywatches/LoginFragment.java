@@ -127,7 +127,7 @@ public class LoginFragment extends Fragment {
     }
     private void gotoAddWatchesFragment() {
         FragmentTransaction ft= getActivity().getSupportFragmentManager().beginTransaction();
-        ft.replace(R.id.frameLayout,new LoginFragment());
+        ft.replace(R.id.frameLayout,new AddWatchesFragment());
         ft.commit();
 
     }
