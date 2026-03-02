@@ -83,6 +83,8 @@ public class LoginFragment extends Fragment {
                         if (task.isSuccessful())
                         {
                             gotoAddWatchesFragment();
+                            Toast.makeText(getActivity(), "welcome", Toast.LENGTH_SHORT).show();
+                            fbs = FirebaseServices.reloadInstance();
                         }
                         else
                         {
