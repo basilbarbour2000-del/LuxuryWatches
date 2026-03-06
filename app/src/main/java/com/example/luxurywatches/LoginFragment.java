@@ -97,8 +97,7 @@ public class LoginFragment extends Fragment {
 
             }
 
-            private void gotoAddWatchesFragment() {
-            }
+
         });
 
     }
